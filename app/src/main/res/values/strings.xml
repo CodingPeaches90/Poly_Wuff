@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Poly_Wuff</string>
+
+    <string name="facebook_app_id">183998822097596</string>
+    <string name="error">There has been an error!</string>
+    <string name="Logout">LogOut</string>
+
+
+</resources>

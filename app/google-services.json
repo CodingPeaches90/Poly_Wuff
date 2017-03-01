@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "29348307523",
+    "firebase_url": "https://poly-wuff-5c4ac.firebaseio.com",
+    "project_id": "poly-wuff-5c4ac",
+    "storage_bucket": "poly-wuff-5c4ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29348307523:android:18f7f85624856ac0",
+        "android_client_info": {
+          "package_name": "com.team.polywuff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29348307523-3rjc9u96onsplv08rns29et2inv27c8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.team.polywuff",
+            "certificate_hash": "1834ed05102ad7b1ca082351d464060b6f8ea152"
+          }
+        },
+        {
+          "client_id": "29348307523-uv5arpct8vmri58b81nm44b1pk2bevpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFsd4hvQr_rhSYUzi4MRlpwFq39wYcPQw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29348307523-uv5arpct8vmri58b81nm44b1pk2bevpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
