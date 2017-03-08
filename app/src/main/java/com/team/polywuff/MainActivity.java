@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
@@ -11,6 +13,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth firebaseAuth;
+    private TextView viewEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +25,33 @@ public class MainActivity extends AppCompatActivity {
         // we can fetch users details by making a firebase user object
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        // if token is nothing then go back to login screen!
+        /*if(firebaseAuth.getCurrentUser() == null || AccessToken.getCurrentAccessToken() == null){
+            finish();
+            startActivity(new Intent(this,FacebookLogin.class));
+        }
+        // if
+
         if(AccessToken.getCurrentAccessToken() == null){
             backToLogin();
+        }*/
+        if (user == null){
+            backToLogin();
         }
+
+        /*viewEmail = (TextView) findViewById(R.id.textView);
+        viewEmail.setText("Welcome " + user.getEmail());
+*/
+
+/*
+errors
+        // if token is nothing then go back to login screen!
+        if(AccessToken.getCurrentAccessToken() == null || user == null){
+            backToLogin();
+            //startActivity(new Intent(this,FacebookLogin.class));
+        }
+*/
 
 
     }

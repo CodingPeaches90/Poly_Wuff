@@ -11,11 +11,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-
 // i was getting a Error:java.util.concurrent.ExecutionException: com.android.ide.common.process.ProcessException:
         // however this answer helped : http://stackoverflow.com/questions/42479407/how-fix-errorjava-util-concurrent-executionexception-com-android-ide-common-pr
-    aaptOptions.cruncherEnabled = false
-    aaptOptions.useNewCruncher = false
+        aaptOptions.cruncherEnabled = false
+        aaptOptions.useNewCruncher = false
     }
     buildTypes {
         release {
@@ -30,18 +29,24 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    testCompile 'junit:junit:4.12'
-// compile facebook sdk
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+
+    // compile facebook sdk
+    
 
     // FIREBASE
 // core is for analytics
-    compile 'com.google.firebase:firebase-core:10.2.0'
     // auth is for authentication with firebase
-    compile 'com.google.firebase:firebase-auth:10.2.0'
     // database real time!
+
+    compile'com.android.support:appcompat-v7:25.2.0'
+    compile'com.android.support:cardview-v7:25.2.0'
+    compile'com.android.support:customtabs:25.2.0'
+    compile'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile'com.google.firebase:firebase-core:10.2.0'
+    compile 'com.google.firebase:firebase-auth:10.2.0'
     compile 'com.google.firebase:firebase-database:10.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    testCompile 'junit:junit:4.12'
 }
 
 apply plugin: 'com.google.gms.google-services'

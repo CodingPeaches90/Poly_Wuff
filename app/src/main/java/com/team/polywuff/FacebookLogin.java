@@ -5,6 +5,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -26,7 +30,24 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.Arrays;
 import java.util.Map;
 
-public class FacebookLogin extends AppCompatActivity {
+public class FacebookLogin extends AppCompatActivity implements View.OnClickListener {
+    // NOTES
+    /*
+        use toast to display to user
+        firebase object auth authenticate
+        firebase listener
+
+
+     */
+
+    // normal sign in
+    private EditText loginEmail;
+    private EditText loginPassword;
+    private Button LoginButtonNormal;
+
+
+
+    private TextView not_have_account;
 
     private static final String TAG = "FacebookLogin";
     // We declare our firebase objects
@@ -45,6 +66,29 @@ public class FacebookLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facebook_login);
+// NORNMAL LOGIN ***************
+        // initialise normal login in
+        loginEmail = (EditText) findViewById(R.id.loginEmail);
+        loginPassword = (EditText) findViewById(R.id.loginPassword);
+        LoginButtonNormal = (Button) findViewById(R.id.LoginButtonNormal);
+
+        LoginButtonNormal.setOnClickListener(this);
+
+
+//mainScreenOnSuccess() proceed to next activity
+
+
+//*****END NORMAL
+        // register link
+        not_have_account = (TextView) findViewById(R.id.not_have_account);
+        not_have_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // because method is public it wont allow instance i.e this.(class)
+                Intent intent = new Intent(FacebookLogin.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // We initialise our login button and also our call back manager
         // in the create method. When app loads do this
@@ -95,7 +139,42 @@ public class FacebookLogin extends AppCompatActivity {
             }
         };
     }
+    //Authenticate with firebase using normal credentials
+    // getting no sign in as i was not calling my method
 
+    private void authenticateLogin(){
+        // grab input from textfields and store in variables
+        String email = loginEmail.getText().toString();
+        String password = loginPassword.getText().toString();
+
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                // when sign in complete do this
+                if(task.isSuccessful()){
+                    // only if task is successful call our main activity and proceed
+                    //sendToOnclick = true;
+                    Toast.makeText(getApplicationContext(),"Logging in",Toast.LENGTH_SHORT).show();
+                    mainScreenOnSuccess();
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Unable to login",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+    // onclick
+    // error code : loop through activities
+    public void onClickd(View view){
+        LoginButtonNormal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                authenticateLogin();
+
+            }
+        });
+    }
 
     // Authentication with firebase
 
@@ -137,6 +216,14 @@ public class FacebookLogin extends AppCompatActivity {
         super.onActivityResult(requestCode,resultCode,data);
         callBack.onActivityResult(requestCode,resultCode,data);
     }
+
+    public void onClick(View view){
+        if(view == LoginButtonNormal){
+            authenticateLogin();
+        }
+    }
+
+
 
     @Override
     public void onStart(){
