@@ -15,6 +15,7 @@ android {
         // however this answer helped : http://stackoverflow.com/questions/42479407/how-fix-errorjava-util-concurrent-executionexception-com-android-ide-common-pr
         aaptOptions.cruncherEnabled = false
         aaptOptions.useNewCruncher = false
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -31,21 +32,23 @@ dependencies {
     })
 
     // compile facebook sdk
-    
 
     // FIREBASE
 // core is for analytics
     // auth is for authentication with firebase
     // database real time!
 
-    compile'com.android.support:appcompat-v7:25.2.0'
-    compile'com.android.support:cardview-v7:25.2.0'
-    compile'com.android.support:customtabs:25.2.0'
-    compile'com.facebook.android:facebook-android-sdk:[4,5)'
-    compile'com.google.firebase:firebase-core:10.2.0'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile 'com.android.support:customtabs:25.2.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.google.firebase:firebase-core:10.2.0'
     compile 'com.google.firebase:firebase-auth:10.2.0'
     compile 'com.google.firebase:firebase-database:10.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:support-vector-drawable:25.2.0'
     testCompile 'junit:junit:4.12'
 }
 

@@ -23,16 +23,15 @@
         android:layout_marginBottom="33dp" />
 
 
-
     <TextView
-        android:text="Not have an account?"
         android:id="@+id/not_have_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="registeractivity"
-        android:layout_marginBottom="52dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:onClick="registeractivity"
+        android:text="@string/create_an_account" />
 
     <TextView
         android:id="@+id/textView3"
@@ -41,12 +40,12 @@
         android:layout_above="@+id/login_button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
-        android:text="OR"
+        android:text="@string/or"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
     <EditText
         android:id="@+id/loginEmail"
-        android:hint="Email Address"
+        android:hint="@string/email_address"
         android:textAlignment="center"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -56,7 +55,7 @@
         android:layout_centerHorizontal="true" />
     <EditText
         android:id="@+id/loginPassword"
-        android:hint="Password"
+        android:hint="@string/password"
         android:textAlignment="center"
         android:layout_width="200dp"
         android:inputType="textPassword"
@@ -66,7 +65,7 @@
         android:layout_marginTop="56dp" />
     <Button
         android:id="@+id/LoginButtonNormal"
-        android:text="Login"
+        android:text="@string/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView3"
