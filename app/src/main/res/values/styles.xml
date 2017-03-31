@@ -17,4 +17,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <color name = "themed" >#4455A4</color>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/t</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+
 </resources>

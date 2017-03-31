@@ -92,6 +92,8 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Intent intent;
+
         if (id == R.id.nav_home) {
             // Handle the action
         } else if (id == R.id.nav_profile) {
@@ -107,6 +109,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_map) {
 
         } else if (id == R.id.nav_pedometer) {
+            // If user presses pedometer go to the pedometer activity
+            intent = new Intent(this,Pedometer.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_settings) {
 
