@@ -107,6 +107,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_messenger) {
 
         } else if (id == R.id.nav_map) {
+            intent = new Intent(this,MapsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_pedometer) {
             // If user presses pedometer go to the pedometer activity

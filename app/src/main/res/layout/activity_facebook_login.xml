@@ -18,6 +18,7 @@
         android:layout_gravity="center_horizontal"
         android:paddingBottom="12dp"
         android:paddingTop="12dp"
+        android:background="@color/colorAccent"
         android:layout_above="@+id/not_have_account"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="33dp" />
@@ -71,5 +72,21 @@
         android:layout_above="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loginEmail"
+        android:layout_alignEnd="@+id/loginEmail"
+        android:layout_alignLeft="@+id/loginEmail"
+        android:layout_alignRight="@+id/loginEmail"
+        android:layout_alignStart="@+id/loginEmail"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="cursive"
+        android:text="PolyWuff"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:textSize="42sp" />
 
 </RelativeLayout>
