@@ -179,7 +179,7 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         viewSteps.setText(String.valueOf(numberSteps));
         viewCalories.setText(String.valueOf(calorie));
 
-        sensorManager.unregisterListener(this);
+        sensorManager.unregisterListener(sensorEventListener);
 
 
 
@@ -190,12 +190,12 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
 
     public void onPause(){
         super.onPause();
-        //sensorManager.unregisterListener(this);
+       // sensorManager.unregisterListener(sensorEventListener);
 
     }
     protected void onStop(){
         super.onStop();
-        sensorManager.unregisterListener(this);
+       // sensorManager.unregisterListener(sensorEventListener);
     }
 
 
