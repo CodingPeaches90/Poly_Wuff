@@ -8,6 +8,34 @@
     <string name="title_activity_main22">Main22Activity</string>
     <string name="search_bar">search_bar</string>
     <string name="title_activity_settings">Settings</string>
+    <!-- string sendbird-->
+    <string name="all_create">Create</string>
+    <string name="all_invite">Invite</string>
+    <!-- Group Channel List -->
+    <string name="group_channel_list_file_message_text">%1$s has uploaded a file.</string>
+
+    <string name="create_group_channel">Create Group Channel</string>
+    <string name="member_list">Members</string>
+    <string name="invite_member">Invite members</string>
+    <!-- Content descriptions -->
+    <string name="open_channel_chat_content_desc_profile">Profile image</string>
+
+    <!-- Menu actions -->
+    <string name="action_create_channel">Create channel</string>
+
+    <string name="download">Download</string>
+    <string name="cancel">Cancel</string>
+    <string name="upload">Upload</string>
+    <string name="resend_message">Resend</string>
+    <string name="delete_message">Delete</string>
+
+    <!-- Message Status -->
+    <string name="message_sending">Sending</string>
+    <string name="message_failed">Failed</string>
+
+
+    <string name="all_group_channels">Group Channels</string>
+    <string name="all_open_channels">Open Channels</string>
 
     <!-- Strings related to Settings -->
 
@@ -110,6 +138,9 @@
     <string name="default_info_snippet">No places found, because location permission is disabled.</string>
     <string name="option_get_place">Get place</string>
     <string name="pick_place">Choose a place</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

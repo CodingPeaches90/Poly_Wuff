@@ -3,27 +3,53 @@ package com.team.polywuff;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.sendbird.android.OpenChannel;
+import com.sendbird.android.SendBird;
+import com.sendbird.android.SendBirdException;
+import com.sendbird.android.User;
+import com.team.polywuff.Messenger.GroupChannelListFragment;
+import com.team.polywuff.Utils.PreferenceUtils;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    // sendbird
+    private static final String APP_ID = "A41D56FF-D61E-46ED-A1A4-09B46FD304FD";
+
     //Firebase variables
     private FirebaseAuth firebaseAuth;
+
+    private Toolbar mToolbar;
+    private NavigationView navigationView;
+
+
+    // sendbird email
+    private String email;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // sendbird auth
+        SendBird.init(APP_ID,getApplicationContext());
+
 
         // we can fetch users details by making a firebase user object
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -33,10 +59,51 @@ public class MainActivity extends AppCompatActivity
         if (user == null)
         {
             backToLogin();
+        }else{
+            // get the email from firebase
+            email = user.getEmail();
         }
+
+
+        // behind the scenes with auth with sendbird
+        SendBird.connect(email, new SendBird.ConnectHandler() {
+            @Override
+            public void onConnected(User user, SendBirdException e) {
+                if(e != null){
+                    Toast.makeText(MainActivity.this, "sendbird error", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        SendBird.registerPushTokenForCurrentUser(FirebaseInstanceId.getInstance().getToken(),
+                new SendBird.RegisterPushTokenWithStatusHandler() {
+                    @Override
+                    public void onRegistered(SendBird.PushTokenRegistrationStatus pushTokenRegistrationStatus, SendBirdException e) {
+                        if(e!=null){
+                            Toast.makeText(MainActivity.this, "error sendbird push token", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+        SendBird.updateCurrentUserInfo(email, null, new SendBird.UserInfoUpdateHandler() {
+            @Override
+            public void onUpdated(SendBirdException e) {
+                if(e!=null){
+                    Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+        }
+
+        String channelUrl = getIntent().getStringExtra("groupChannelUrl");
+
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -45,8 +112,9 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -67,6 +135,30 @@ public class MainActivity extends AppCompatActivity
         // logout firebase
         FirebaseAuth.getInstance().signOut();
         backToLogin();
+
+        SendBird.unregisterPushTokenAllForCurrentUser(new SendBird.UnregisterPushTokenHandler() {
+            @Override
+            public void onUnregistered(SendBirdException e) {
+                if (e != null) {
+                    // Error!
+                    e.printStackTrace();
+                    return;
+                }
+
+                Toast.makeText(MainActivity.this, "All push tokens unregistered.", Toast.LENGTH_SHORT)
+                        .show();
+
+                SendBird.disconnect(new SendBird.DisconnectHandler() {
+                    @Override
+                    public void onDisconnected() {
+                        PreferenceUtils.setConnected(MainActivity.this, false);
+                        Intent intent = new Intent(getApplicationContext(), FacebookLogin.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+            }
+        });
     }
 
     private void backToLogin() {
@@ -92,6 +184,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         Intent intent;
 
         if (id == R.id.nav_home) {
@@ -105,6 +198,16 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_search) {
 
         } else if (id == R.id.nav_messenger) {
+            // messeneger
+            Fragment fragment = GroupChannelListFragment.newInstance();
+
+            FragmentManager manager = getSupportFragmentManager();
+            manager.popBackStack();
+            manager.beginTransaction()
+                    .replace(R.id.container_main,fragment)
+                    .commit();
+
+
 
         } else if (id == R.id.nav_map) {
             intent = new Intent(this,MapsActivity.class);
@@ -125,5 +228,10 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void setActionBarTitle(String title) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
     }
 }
