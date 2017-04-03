@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import com.sendbird.android.GroupChannel;
 import com.sendbird.android.SendBirdException;
@@ -41,8 +40,6 @@ public class MemberListActivity extends AppCompatActivity{
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_member_list);
         mListAdapter = new UserListAdapter(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_member_list);
-        setSupportActionBar(toolbar);
 
 
 
