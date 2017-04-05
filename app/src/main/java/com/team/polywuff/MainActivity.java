@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //if user is equal to null go back
+        //if user is equal to null go back to login
         if (user == null)
         {
             backToLogin();
