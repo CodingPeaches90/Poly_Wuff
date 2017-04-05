@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         }else if(TextUtils.isEmpty(tempPass) || TextUtils.isEmpty(tempMatch)){
             Toast.makeText(RegisterActivity.this,"Please enter a valid password",Toast.LENGTH_SHORT).show();
-        }else if(tempPass == tempMatch){
+        }else if(tempPass != tempMatch){
             Toast.makeText(RegisterActivity.this,"Passwords do not match!",Toast.LENGTH_SHORT).show();
             enteredPassword.getText().clear();
             confirmPassword.getText().clear();

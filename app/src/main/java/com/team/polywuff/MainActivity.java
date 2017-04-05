@@ -195,9 +195,19 @@ public class MainActivity extends AppCompatActivity
             //Intent pIntent = new Intent(this, Profile.class);
             //startActivity(pIntent);
 
-        } else if (id == R.id.nav_search) {
+        }
+        else if (id == R.id.nav_search)
+        {
+            Fragment fragment = GroupChannelListFragment.newInstance();
 
-        } else if (id == R.id.nav_messenger) {
+            FragmentManager manager = getSupportFragmentManager();
+            manager.popBackStack();
+            manager.beginTransaction().replace(R.id.container_main,fragment).commit();
+
+
+
+        }
+        else if (id == R.id.nav_messenger) {
             // messeneger
             Fragment fragment = GroupChannelListFragment.newInstance();
 
