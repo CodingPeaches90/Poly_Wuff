@@ -37,6 +37,18 @@
         <activity android:name=".FacebookLogin" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Pedometer" />
+
+        <activity
+            android:name=".Calendar"
+            android:label="Calendar" >
+            <intent-filter>
+                <action android:name="com.team.polywuff.Calendar" />
+                <category android:name="android.intent.category.DEFAULT" />
+                Intent i = new Intent("com.iphonik.chameleon.AppPreferenceActivity");
+            </intent-filter>
+        </activity>
+
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

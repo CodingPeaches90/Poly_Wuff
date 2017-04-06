@@ -17,7 +17,6 @@ import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.sendbird.android.OpenChannel;
 import com.sendbird.android.SendBird;
 import com.sendbird.android.SendBirdException;
 import com.sendbird.android.User;
@@ -224,6 +223,8 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(this,MapsActivity.class);
             startActivity(intent);
 
+
+
         } else if (id == R.id.nav_pedometer) {
             // If user presses pedometer go to the pedometer activity
             intent = new Intent(this,Pedometer.class);
@@ -234,6 +235,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout) {
             //brings the user back to the login activity
             getMeOut();
+        }
+        else if (id == R.id.nav_calendar){
+            intent = new Intent (this,Calendar.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

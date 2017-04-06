@@ -26,6 +26,10 @@
             android:id="@+id/nav_pedometer"
             android:icon="@drawable/ic_directions_walk_black_24dp"
             android:title="Pedometer" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Calendar" />
     </group>
 
     <group android:id="@+id/menu_bottom">
