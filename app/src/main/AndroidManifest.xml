@@ -37,17 +37,16 @@
         <activity android:name=".FacebookLogin" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Pedometer" />
-
         <activity
             android:name=".Calendar"
-            android:label="Calendar" >
+            android:label="Calendar">
             <intent-filter>
                 <action android:name="com.team.polywuff.Calendar" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 Intent i = new Intent("com.iphonik.chameleon.AppPreferenceActivity");
             </intent-filter>
         </activity>
-
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -69,7 +68,27 @@
         <activity android:name=".Messenger.MemberListActivity" />
         <activity android:name=".Utils.MediaPlayerActivity" />
         <activity android:name=".Messenger.MediaPlayerActivity" />
-        <activity android:name=".Utils.PhotoViewerActivity"></activity>
+        <activity android:name=".Utils.PhotoViewerActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PasswordActivity"
+            android:label="@string/title_activity_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DeleteAccountActivity"
+            android:label="@string/title_activity_delete_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GeneralActivity"
+            android:label="@string/title_activity_general"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

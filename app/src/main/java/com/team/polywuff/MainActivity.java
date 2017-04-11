@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
         // sendbird auth
         SendBird.init(APP_ID,getApplicationContext());
 
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onUpdated(SendBirdException e) {
                 if(e!=null){
-                    Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
                     return;
                 }
             }
@@ -231,6 +234,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_settings) {
+            intent = new Intent(this,SettingsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_logout) {
             //brings the user back to the login activity
