@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
@@ -52,7 +53,6 @@ public class MainActivity extends AppCompatActivity
         // sendbird auth
         SendBird.init(APP_ID,getApplicationContext());
 
-
         // we can fetch users details by making a firebase user object
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onConnected(User user, SendBirdException e) {
                 if(e != null){
-                    Toast.makeText(MainActivity.this, "sendbird error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "sendbird connect error", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onRegistered(SendBird.PushTokenRegistrationStatus pushTokenRegistrationStatus, SendBirdException e) {
                         if(e!=null){
-                            Toast.makeText(MainActivity.this, "error sendbird push token", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Sendbird register issue", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -90,11 +90,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onUpdated(SendBirdException e) {
                 if(e!=null){
-                    //Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
                     return;
                 }
             }
         });
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -193,10 +194,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the action
         } else if (id == R.id.nav_profile) {
-            //this is the code for opening activities
-
-            //Intent pIntent = new Intent(this, Profile.class);
-            //startActivity(pIntent);
+            intent = new Intent(this,ProfileActivity.class);
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_search)
@@ -206,8 +205,6 @@ public class MainActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.popBackStack();
             manager.beginTransaction().replace(R.id.container_main,fragment).commit();
-
-
 
         }
         else if (id == R.id.nav_messenger) {
@@ -219,8 +216,6 @@ public class MainActivity extends AppCompatActivity
             manager.beginTransaction()
                     .replace(R.id.container_main,fragment)
                     .commit();
-
-
 
         } else if (id == R.id.nav_map) {
             intent = new Intent(this,MapsActivity.class);

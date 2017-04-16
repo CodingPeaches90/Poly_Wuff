@@ -7,6 +7,7 @@
     <color name="t">#5869b8</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <!-- Group Chat -->
     <color name="groupChatBubbleMe">#7d62d9</color>
     <color name="groupChatTextMe">#ffffff</color>
