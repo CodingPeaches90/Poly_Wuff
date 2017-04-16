@@ -26,8 +26,8 @@
 
     <Button
         android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
         android:text="Start"
         android:theme="@style/AppTheme.Button"
         android:onClick="start"
@@ -36,8 +36,11 @@
         app:layout_constraintBottom_toTopOf="@+id/reset"
         app:layout_constraintRight_toRightOf="@+id/reset"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="23dp"
-        app:layout_constraintLeft_toLeftOf="@+id/reset" />
+        android:layout_marginBottom="59dp"
+        app:layout_constraintLeft_toLeftOf="@+id/reset"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:layout_editor_absoluteY="333dp"
+        tools:layout_editor_absoluteX="136dp" />
 
     <TextView
         android:id="@+id/calorieNumber"
@@ -90,8 +93,8 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
         android:text="Reset"
         android:onClick="reset"
         android:theme="@style/AppTheme.Button"
@@ -100,6 +103,6 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="68dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>

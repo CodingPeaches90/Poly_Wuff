@@ -16,8 +16,8 @@
     <application
         android:name=".PolyWuffApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label=""
+        android:icon="@drawable/polywufflogo"
+        android:label="@string/PolyWuff"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <meta-data
@@ -63,9 +63,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Messenger.CreateGroupChannelActivity" />
-        <activity android:name=".Messenger.InviteMemberActivity" />
-        <activity android:name=".Messenger.MemberListActivity" />
+        <activity android:name=".Messenger.CreateGroupChannelActivity"
+            android:label="Create Chat"
+            />
+        <activity android:name=".Messenger.InviteMemberActivity"
+            android:label="Invite Members"
+            />
+        <activity android:name=".Messenger.MemberListActivity"
+            android:label="Messenger"
+            />
         <activity android:name=".Utils.MediaPlayerActivity" />
         <activity android:name=".Messenger.MediaPlayerActivity" />
         <activity android:name=".Utils.PhotoViewerActivity" />
@@ -95,7 +101,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FilterActivity"
-            android:label="@string/title_activity_filter"
+            android:label="@string/search"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".SearchActivity"

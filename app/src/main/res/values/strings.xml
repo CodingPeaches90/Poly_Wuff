@@ -148,19 +148,20 @@
     <string name="title_activity_password">Change password</string>
     <string name="title_activity_general">General</string>
 
+
     <!-- Block of text to be displayed on the about activity in the settigns -->
-    <string name="about_text"><![CDATA[
-    PolyWuff<br/><br/>
-    Dog walking service<br/><br/>
-    Dog minding service<br/><br/>
-    Dog lovers<br/><br/>
-    Train your dog<br/><br/>
-    Love your dog<br/><br/>
-    Earn some income doing what you love<br/><br/>
-    Make money doing something you were already doing for free<br/><br/>
-    Trademark<br/><br/>
-    Copyright<br/><br/>
-    Wuff Wuff<br/><br/>
-    ]]></string>
+    <string name="about_text">
+        <![CDATA[
+            This app was made by: <br/><br/>
+            Christopher Kambayi<br/><br/>
+            Darren Gough<br/><br/>
+            Dziugas Grusauskas<br/><br/>
+            Emma English<br/><br/>
+            Jordan May<br/><br/>
+    ]]>
+    </string>
+    <string name="version_1_0">Version 1.0</string>
+
     <string name="title_activity_filter">FilterActivity</string>
+    <string name="search">Search</string>
 </resources>
