@@ -186,9 +186,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        // Turn on the My Location layer and the related control on the map
-        updateLocationUI();
-
         // Get the current location of the device and set the position of the map
         getDeviceLocation();
 
@@ -230,9 +227,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // The location isn't set and the default is used i.e. Sydney
         else {
+            /*
             Log.d(TAG, "Current location is null. Using defaults.");
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDefaultLocation, DEFAULT_ZOOM));
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
+            */
         }
     }
 
@@ -299,11 +298,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             });
         } else {
+            /*
             //Add a default marker, because the user hasn't selected a place.
             mMap.addMarker(new MarkerOptions()
                     .title(getString(R.string.default_info_title))
                     .position(mDefaultLocation)
                     .snippet(getString(R.string.default_info_snippet)));
+                    */
         }
     }
 

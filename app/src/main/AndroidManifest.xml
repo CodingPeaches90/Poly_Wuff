@@ -62,7 +62,10 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps">
+        </activity>
+
+
         <activity
             android:name=".Messenger.CreateGroupChannelActivity"
             android:label="Create Chat" />
