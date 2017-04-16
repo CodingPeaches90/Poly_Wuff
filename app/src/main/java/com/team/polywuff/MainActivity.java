@@ -11,7 +11,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
@@ -192,7 +191,9 @@ public class MainActivity extends AppCompatActivity
         Intent intent;
 
         if (id == R.id.nav_home) {
-            // Handle the action
+            intent = new Intent(this,Home_Activity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_profile) {
             intent = new Intent(this,ProfileActivity.class);
             startActivity(intent);

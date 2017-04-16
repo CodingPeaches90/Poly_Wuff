@@ -63,15 +63,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Messenger.CreateGroupChannelActivity"
-            android:label="Create Chat"
-            />
-        <activity android:name=".Messenger.InviteMemberActivity"
-            android:label="Invite Members"
-            />
-        <activity android:name=".Messenger.MemberListActivity"
-            android:label="Messenger"
-            />
+        <activity
+            android:name=".Messenger.CreateGroupChannelActivity"
+            android:label="Create Chat" />
+        <activity
+            android:name=".Messenger.InviteMemberActivity"
+            android:label="Invite Members" />
+        <activity
+            android:name=".Messenger.MemberListActivity"
+            android:label="Messenger" />
         <activity android:name=".Utils.MediaPlayerActivity" />
         <activity android:name=".Messenger.MediaPlayerActivity" />
         <activity android:name=".Utils.PhotoViewerActivity" />
@@ -102,11 +102,15 @@
         <activity
             android:name=".FilterActivity"
             android:label="@string/search"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SearchActivity"
             android:label="Search"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Home_Activity"
+            android:label="@string/Home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
