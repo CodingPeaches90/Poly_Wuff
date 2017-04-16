@@ -200,11 +200,8 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_search)
         {
-            Fragment fragment = GroupChannelListFragment.newInstance();
-
-            FragmentManager manager = getSupportFragmentManager();
-            manager.popBackStack();
-            manager.beginTransaction().replace(R.id.container_main,fragment).commit();
+            intent = new Intent(this,FilterActivity.class);
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_messenger) {

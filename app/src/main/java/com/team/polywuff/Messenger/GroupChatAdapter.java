@@ -738,7 +738,7 @@ class GroupChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 ImageUtils.displayRoundImageFromUrl(context, message.getSender().getProfileUrl(), profileImage);
 
                 nicknameText.setVisibility(View.VISIBLE);
-                nicknameText.setText(message.getSender().getNickname());
+                nicknameText.setText(message.getSender().getUserId());
             }
 
             messageText.setText(message.getMessage());
@@ -872,7 +872,7 @@ class GroupChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 ImageUtils.displayRoundImageFromUrl(context, message.getSender().getProfileUrl(), profileImage);
 
                 nicknameText.setVisibility(View.VISIBLE);
-                nicknameText.setText(message.getSender().getNickname());
+                nicknameText.setText(message.getSender().getUserId());
             }
 
             if (listener != null) {
@@ -1012,7 +1012,7 @@ class GroupChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 ImageUtils.displayRoundImageFromUrl(context, message.getSender().getProfileUrl(), profileImage);
 
                 nicknameText.setVisibility(View.VISIBLE);
-                nicknameText.setText(message.getSender().getNickname());
+                nicknameText.setText(message.getSender().getUserId());
             }
 
             // Get thumbnails from FileMessage
@@ -1156,7 +1156,7 @@ class GroupChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 ImageUtils.displayRoundImageFromUrl(context, message.getSender().getProfileUrl(), profileImage);
 
                 nicknameText.setVisibility(View.VISIBLE);
-                nicknameText.setText(message.getSender().getNickname());
+                nicknameText.setText(message.getSender().getUserId());
             }
 
             // Get thumbnails from FileMessage

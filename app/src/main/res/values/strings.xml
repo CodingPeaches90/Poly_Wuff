@@ -162,4 +162,5 @@
     Copyright<br/><br/>
     Wuff Wuff<br/><br/>
     ]]></string>
+    <string name="title_activity_filter">FilterActivity</string>
 </resources>

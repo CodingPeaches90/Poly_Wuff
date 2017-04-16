@@ -100,7 +100,7 @@ public class SelectableUserListAdapter extends RecyclerView.Adapter<RecyclerView
 
         private void bind(final Context context, final User user, boolean isSelected, final OnItemCheckedChangeListener listener) {
 
-            nameText.setText(user.getNickname());
+            nameText.setText(user.getUserId());
             ImageUtils.displayRoundImageFromUrl(context, user.getProfileUrl(), profileImage);
 
             if (isSelected) {

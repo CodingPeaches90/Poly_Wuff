@@ -34,6 +34,7 @@ public class SearchActivity extends AppCompatActivity
 
     private Button userChatSelectBtn;
     private String chatId;
+    private String location;
 
     private List<String> chosenUsers;
 
@@ -50,6 +51,12 @@ public class SearchActivity extends AppCompatActivity
         setContentView(R.layout.activity_invite_member);
 
         chosenUsers = new ArrayList<>();
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            location = extras.getString("LOCATION");
+            //The key argument here must match that used in the other activity
+        }
 
         searchRecyclerView = (RecyclerView) findViewById(R.id.recycler_invite_member);
         usersFound = new SelectableUserListAdapter(this);
@@ -114,8 +121,15 @@ public class SearchActivity extends AppCompatActivity
                     // Error!
                     return;
                 }
-
-                usersFound.setUserList(list);
+                User searchUser;
+                for (int i = 0; i < list.size();i++)
+                {
+                    searchUser = list.get(i);
+                    if(searchUser.getNickname().equals(location))
+                    {
+                        usersFound.addLast(searchUser);
+                    }
+                }
             }
         });
     }
@@ -131,8 +145,15 @@ public class SearchActivity extends AppCompatActivity
                     return;
                 }
 
-                for (User user : list) {
-                    usersFound.addLast(user);
+                User searchUser;
+
+                for (int i = 0; i < list.size();i++)
+                {
+                    searchUser = list.get(i);
+                    if(searchUser.getNickname().equals(location))
+                    {
+                        usersFound.addLast(searchUser);
+                    }
                 }
             }
         });

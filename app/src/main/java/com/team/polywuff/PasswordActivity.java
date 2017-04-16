@@ -52,7 +52,7 @@ public class PasswordActivity extends AppCompatActivity {
     //method to change user password
     public void changePassword(EditText password){
 
-        String newPassword = password.getText().toString();
+        String newPassword = password.toString();
 
         //button pressed and nothing enterd. Push a warning toast
         if(newPassword.equals(""))

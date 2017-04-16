@@ -455,9 +455,9 @@ public class GroupChatFragment extends Fragment {
             String string;
 
             if (typingUsers.size() == 1) {
-                string = typingUsers.get(0).getNickname() + " is typing";
+                string = typingUsers.get(0).getUserId() + " is typing";
             } else if (typingUsers.size() == 2) {
-                string = typingUsers.get(0).getNickname() + " " + typingUsers.get(1).getNickname() + " is typing";
+                string = typingUsers.get(0).getUserId() + " " + typingUsers.get(1).getUserId() + " is typing";
             } else {
                 string = "Multiple users are typing";
             }
