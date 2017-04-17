@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvPlaceName" type="id" />
+    <item name="tvPlaceAddress" type="id" />
+    <item name="wvAttribution" type="id" />
+    <item name="btGetPlace" type="id" />
+</resources>
