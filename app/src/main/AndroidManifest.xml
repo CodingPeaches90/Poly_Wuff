@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -61,18 +60,13 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDp3bRH6sY80jNHPGX94_eYU3kTiC-Wfhc" />
-
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"
-            />
+            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-        </activity>
-
-
+            android:label="@string/title_activity_maps" />
         <activity
             android:name=".Messenger.CreateGroupChannelActivity"
             android:label="Create Chat" />
@@ -119,7 +113,19 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Home_Activity"
-            android:label="@string/Home"
+            android:label="@string/title_activity_home_"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Assist"
+            android:label="@string/title_activity_assist"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Exercise"
+            android:label="@string/title_activity_exercise"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Socialise"
+            android:label="@string/title_activity_socialise"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
