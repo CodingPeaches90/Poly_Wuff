@@ -1,6 +1,10 @@
+/*
+ * @author Christopher Kambayi, x15513473
+ * @author Emma English, x15575767
+ *
+ */
 package com.team.polywuff;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;

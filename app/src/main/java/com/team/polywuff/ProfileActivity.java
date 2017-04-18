@@ -1,3 +1,7 @@
+/*
+ * @author: Christopher Kambayi, x15513473
+ *
+ */
 package com.team.polywuff;
 
 import android.graphics.Bitmap;

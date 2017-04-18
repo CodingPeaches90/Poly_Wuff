@@ -1,3 +1,7 @@
+/*
+ * @author: Christopher Kambayi, x15513473
+ *
+ */
 package com.team.polywuff;
 
 import android.os.Bundle;
@@ -14,7 +18,6 @@ import com.sendbird.android.SendBird;
 import com.sendbird.android.SendBirdException;
 import com.sendbird.android.User;
 import com.sendbird.android.UserListQuery;
-import com.team.polywuff.Messenger.GroupChannelListFragment;
 import com.team.polywuff.Messenger.SelectableUserListAdapter;
 
 import java.util.ArrayList;

@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.team.polywuff.Exercise"
-    tools:showIn="@layout/activity_exercise">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="276dp"
-        android:layout_marginBottom="278dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginStart="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/exerciseb"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginLeft="26dp"
-        android:layout_marginRight="26dp" />
+    tools:showIn="@layout/activity_exercise"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title_aboubt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exercise"
@@ -34,22 +19,95 @@
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="208dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/about_info"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:text="Our app provides an aspect of fitness and convenience to our users."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="248dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/title_aboubt"
+        android:layout_alignLeft="@+id/title_pedometer"
+        android:layout_alignStart="@+id/title_pedometer" />
+
+    <TextView
+        android:id="@+id/title_pedometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="18sp"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView" />
+        android:text="Pedometer"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="325dp"
+        android:layout_below="@+id/about_info"
+        android:layout_alignLeft="@+id/about_pedometer"
+        android:layout_alignStart="@+id/about_pedometer"
+        android:layout_marginTop="15dp" />
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/exerciseb"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-123dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/about_pedometer"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:text="Users can count the amount of steps they take and have it converted to the amount of calories they burnt."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteY="366dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_below="@+id/title_pedometer"
+        android:layout_alignLeft="@+id/title_map"
+        android:layout_alignStart="@+id/title_map"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/title_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Map"
+        tools:layout_editor_absoluteY="416dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_below="@+id/about_pedometer"
+        android:layout_alignLeft="@+id/about_search"
+        android:layout_alignStart="@+id/about_search"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/about_search"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:text="Users can use their current location to find close by establishments."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteY="452dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_below="@+id/title_map"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+</RelativeLayout>

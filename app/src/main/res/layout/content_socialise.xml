@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.team.polywuff.Socialise"
-    tools:showIn="@layout/activity_socialise">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="276dp"
-        app:srcCompat="@drawable/socialiseb"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="26dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="279dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="26dp"
-        android:layout_marginRight="26dp" />
+    tools:showIn="@layout/activity_socialise"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title_aboubt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Socialise"
@@ -34,22 +19,93 @@
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="208dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/about_info"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:text="Our app provides users the means to communicate one-to-one."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="248dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/title_aboubt"
+        android:layout_alignLeft="@+id/about_calendar"
+        android:layout_alignStart="@+id/about_calendar" />
+
+    <TextView
+        android:id="@+id/title_messenger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="18sp"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView" />
+        android:text="Messenger"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="325dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/about_info"
+        android:layout_alignLeft="@+id/about_info"
+        android:layout_alignStart="@+id/about_info" />
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/socialiseb"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-123dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/about_messenger"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:text="Messenger allows users to communicate one-to-one, and send media."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteY="366dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_below="@+id/title_messenger"
+        android:layout_alignLeft="@+id/title_messenger"
+        android:layout_alignStart="@+id/title_messenger"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/title_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Calendar"
+        android:layout_below="@+id/about_messenger"
+        android:layout_alignLeft="@+id/about_messenger"
+        android:layout_alignStart="@+id/about_messenger"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/about_calendar"
+        android:layout_width="330sp"
+        android:layout_height="wrap_content"
+        android:text="Allows users to see the date, and will allow users to add events in the future."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteY="452dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_below="@+id/title_calendar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>

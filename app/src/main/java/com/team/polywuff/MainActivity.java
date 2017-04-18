@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity
 
     // sendbird email
     private String email;
+    Fragment fragment;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,8 +116,11 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-         navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        fragment = GroupChannelListFragment.newInstance();
 
     }
 
@@ -207,6 +211,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_messenger) {
             // messeneger
+
             Fragment fragment = GroupChannelListFragment.newInstance();
 
             FragmentManager manager = getSupportFragmentManager();

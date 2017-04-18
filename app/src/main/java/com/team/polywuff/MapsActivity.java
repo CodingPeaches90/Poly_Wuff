@@ -1,3 +1,10 @@
+/*
+ * @author: Emma English, x15575767
+ *
+ * @reference https://www.youtube.com/watch?v=hDXzW3J7Ul0
+ *
+ */
+
 package com.team.polywuff;
 
 import android.Manifest;
@@ -21,29 +28,36 @@ import com.google.android.gms.location.places.ui.PlacePicker;
 
 public class MapsActivity extends AppCompatActivity {
 
+    //display variables
     TextView placeNameText;
     TextView placeAddressText;
     WebView attributionText;
     Button getPlaceButton;
+    //permissions & place picker
     private final static int MY_PERMISSION_FINE_LOCATION = 101;
     private final static int PLACE_PICKER_REQUEST = 1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //set the layout
         setContentView(R.layout.activity_maps);
 
+        //request location permission
         requestPermission();
 
+        //connect the buttons
         placeNameText = (TextView) findViewById(R.id.tvPlaceName);
         placeAddressText = (TextView) findViewById(R.id.tvPlaceAddress);
         attributionText = (WebView) findViewById(R.id.wvAttribution);
         getPlaceButton = (Button) findViewById(R.id.btGetPlace);
+
+        //create a listener
         getPlaceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                // create an intent for place picker
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 try {
                     Intent intent = builder.build(MapsActivity.this);
@@ -58,6 +72,7 @@ public class MapsActivity extends AppCompatActivity {
         });
     }
 
+    //request access to the fine location
     private void requestPermission() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -66,6 +81,7 @@ public class MapsActivity extends AppCompatActivity {
         }
     }
 
+    //when permission is given
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

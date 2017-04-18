@@ -8,7 +8,6 @@
     tools:context="com.team.polywuff.GeneralActivity"
     tools:showIn="@layout/activity_general">
 
-
     <ListView
         android:id="@+id/generalListView"
         android:layout_width="0dp"

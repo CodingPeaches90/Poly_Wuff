@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.team.polywuff.Home_Activity"
-    tools:showIn="@layout/activity_home_"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
-
+    tools:showIn="@layout/activity_home_">
 
     <ImageButton
         android:id="@+id/assist"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_weight="1"
-        android:background="@drawable/assist"
-        app:layout_constraintBottom_toTopOf="@+id/socialise"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="6dp" />
-
-
-    <ImageButton
-        android:id="@+id/exercise"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/socialise"
-        android:layout_weight="1"
-        android:background="@drawable/exercise"
-
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/socialise"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintLeft_toLeftOf="@+id/socialise"
-        app:layout_constraintHorizontal_bias="0.0" />
-
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/assist"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/socialise"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/assist"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/socialiseb"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />" />
+
+    <ImageButton
+        android:id="@+id/exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/exerciseb"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:text="Assist"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:layout_alignBottom="@+id/assist"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/socialise"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/exercise"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:layout_centerVertical="true"
+        android:text="Exercise" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:text="Socialise"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginBottom="59dp" />
+    />
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
 

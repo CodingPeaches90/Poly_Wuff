@@ -164,9 +164,9 @@
 
     <string name="title_activity_filter">FilterActivity</string>
     <string name="search">Search</string>
-    <string name="title_activity_home_">Home_Activity</string>
-    <string name="Home">Home</string>
+    <string name="title_activity_home_">Home</string>
     <string name="title_activity_assist">Assist</string>
     <string name="title_activity_exercise">Exercise</string>
     <string name="title_activity_socialise">Socialise</string>
+    <string name="title_activity_blank">Blank</string>
 </resources>

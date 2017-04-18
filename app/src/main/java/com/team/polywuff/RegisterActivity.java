@@ -1,3 +1,7 @@
+/*
+ * @author: Jordan May, x15515673
+ *
+ */
 package com.team.polywuff;
 
 import android.content.Intent;

@@ -1,10 +1,13 @@
+/*
+* author: Dziugas Grusaukas, x15304641
+ */
+
 package com.team.polywuff;
 
         import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.widget.CalendarView;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.CalendarView;
+import android.widget.TextView;
 
 public class Calendar extends AppCompatActivity {
 

@@ -1,13 +1,14 @@
+/*
+* @author: Emma English, x15575767
+ */
+
 package com.team.polywuff;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.view.View;
 import android.widget.TextView;
-
-import static android.R.attr.versionName;
 
 public class AboutActivity extends AppCompatActivity {
 

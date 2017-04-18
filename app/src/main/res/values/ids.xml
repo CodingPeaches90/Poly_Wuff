@@ -4,4 +4,6 @@
     <item name="tvPlaceAddress" type="id" />
     <item name="wvAttribution" type="id" />
     <item name="btGetPlace" type="id" />
+    <item name="fragmentLayout" type="id" />
+
 </resources>
