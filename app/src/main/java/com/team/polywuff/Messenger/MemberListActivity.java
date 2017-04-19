@@ -2,6 +2,7 @@ package com.team.polywuff.Messenger;
 /**
  @author : Jordan May
  @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/MemberListActivity.java
+ Note : None of this code was altered
  **/
 import android.os.Bundle;
 import android.support.annotation.Nullable;

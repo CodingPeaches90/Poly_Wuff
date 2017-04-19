@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,13 +19,12 @@ import com.sendbird.android.FileMessage;
 import com.sendbird.android.GroupChannel;
 import com.sendbird.android.SendBird;
 import com.sendbird.android.UserMessage;
-import com.sendbird.android.shadow.com.google.gson.internal.ObjectConstructor;
 import com.team.polywuff.R;
+import com.team.polywuff.Utils.DateUtils;
 import com.team.polywuff.Utils.FileUtils;
 import com.team.polywuff.Utils.ImageUtils;
-import com.team.polywuff.Utils.TypingIndicator;
-import com.team.polywuff.Utils.DateUtils;
 import com.team.polywuff.Utils.TextUtils;
+import com.team.polywuff.Utils.TypingIndicator;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,6 +34,7 @@ import java.util.List;
 /**
  * @author : Jordan May x15515673
  * @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/GroupChannelListAdapter.java
+ * Note : None of this code was altered
  */
 
 public class GroupChannelListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

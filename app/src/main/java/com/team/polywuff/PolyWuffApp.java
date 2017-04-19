@@ -7,7 +7,8 @@ import com.facebook.appevents.AppEventsLogger;
 /**
  * Created by jordanmay on 28/02/2017.
  *
- * https://developers.facebook.com/docs/app-events/android/
+ * @reference: https://developers.facebook.com/docs/app-events/android/
+ * @reference: https://www.youtube.com/watch?v=Jims30XAzjI
  */
 
 public class PolyWuffApp extends Application {

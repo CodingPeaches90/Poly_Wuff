@@ -27,6 +27,7 @@ import static android.app.Activity.RESULT_OK;
 /*
     @author : Jordan May
     @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/GroupChannelListFragment.java
+    Note : None of this code was altered
  */
 
 

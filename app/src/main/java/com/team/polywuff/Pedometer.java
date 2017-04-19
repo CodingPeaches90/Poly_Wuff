@@ -1,6 +1,6 @@
 /*
  * @author Jordan May, x15515673
- *
+ * @reference: http://nebomusic.net/androidlessons/Pedometer_Project.pdf
  */
 package com.team.polywuff;
 
@@ -107,6 +107,8 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                 The website below is where i got the value:
 
                 www.livestrong.com/article/238020-how-to-convert-pedometer-steps-calories
+
+                Used algorithm from PDF but altered it to be better
 
              */
             if(Math.abs(currentX - previousX) > thresholdX){

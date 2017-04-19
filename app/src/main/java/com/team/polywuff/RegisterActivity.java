@@ -1,6 +1,7 @@
 /*
  * @author: Jordan May, x15515673
- *
+ * @reference: https://www.youtube.com/watch?v=0NFwF7L-YA8
+ * @reference: https://firebase.google.com/docs/auth/android/password-auth
  */
 package com.team.polywuff;
 
@@ -61,8 +62,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         };
 
-
     }
+
+    // checking the fields, at end of if statement go to registerTheUser method
     public void clearFields(){
         // store temp strings
         String tempEmail = enteredEmail.getText().toString();

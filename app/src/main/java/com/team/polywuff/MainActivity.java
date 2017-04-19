@@ -23,6 +23,13 @@ import com.sendbird.android.User;
 import com.team.polywuff.Messenger.GroupChannelListFragment;
 import com.team.polywuff.Utils.PreferenceUtils;
 
+/*
+* @reference: https://firebase.google.com/docs/auth/android/manage-users
+*  I used this to learn about using user instance
+*
+*  @reference: https://docs.sendbird.com/android
+*  I used this for  for connecting user to sendbird database
+ */
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

@@ -2,6 +2,7 @@ package com.team.polywuff.Messenger;
 /*
     @author: Jordan May, x15515673
     @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/CreateGroupChannelActivity.java
+    Note : None of this code was altered
  */
 import android.content.Intent;
 import android.os.Bundle;

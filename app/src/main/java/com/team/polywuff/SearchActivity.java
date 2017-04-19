@@ -1,6 +1,6 @@
 /*
  * @author: Christopher Kambayi, x15513473
- *
+ * @reference: https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/SelectableUserListAdapter.java
  */
 package com.team.polywuff;
 

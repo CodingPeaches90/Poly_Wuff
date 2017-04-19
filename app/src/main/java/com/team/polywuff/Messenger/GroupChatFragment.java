@@ -3,6 +3,7 @@ package com.team.polywuff.Messenger;
 /**
  @author : Jordan May
  @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/GroupChatFragment.java
+ Note : None of this code was altered
  **/
 
 import android.Manifest;
