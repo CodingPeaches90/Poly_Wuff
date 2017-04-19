@@ -19,35 +19,9 @@
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="match_parent"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/date_display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calendar View Date Display"
-        android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="fill_parent"
-        android:layout_height="54dp"
-        android:layout_weight="0.87"
-        android:autoLink="web"
-        android:gravity="bottom|center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_add_event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        app:srcCompat="@drawable/ic_add_white_24dp"
-        app:useCompatPadding="true" />
 
 </LinearLayout>
