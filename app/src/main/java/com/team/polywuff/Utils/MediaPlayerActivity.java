@@ -1,5 +1,12 @@
 package com.team.polywuff.Utils;
 
+/**
+ *
+ * @author : Jordan May, x15515673
+ *
+ * @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/utils/MediaPlayerActivity.java
+ */
+
 import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;

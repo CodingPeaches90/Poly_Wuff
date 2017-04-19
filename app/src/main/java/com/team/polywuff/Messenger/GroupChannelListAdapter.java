@@ -34,7 +34,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Jordan on 01/04/2017.
+ * @author : Jordan May x15515673
+ * @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/GroupChannelListAdapter.java
  */
 
 public class GroupChannelListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

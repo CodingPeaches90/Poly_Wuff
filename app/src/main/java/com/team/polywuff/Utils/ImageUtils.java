@@ -1,8 +1,13 @@
 package com.team.polywuff.Utils;
 
+
 /**
- * Created by Jordan on 01/04/2017.
+ *
+ * @author : Jordan May, x15515673
+ *
+ * @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/utils/ImageUtils.java
  */
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;

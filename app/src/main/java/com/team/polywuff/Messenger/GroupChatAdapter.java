@@ -1,8 +1,9 @@
 package com.team.polywuff.Messenger;
 
 /**
- * Created by Jordan on 01/04/2017.
- */
+ @author : Jordan May
+ @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/groupchannel/GroupChatAdapter.java
+ **/
 import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;

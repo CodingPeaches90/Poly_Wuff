@@ -1,6 +1,11 @@
 /*
- * @author Jordan May, x15515673
- *
+ * FacebookLogin.java
+ * @author: Jordan May, x15515673
+ * @reference https://www.youtube.com/watch?v=1HgM_vc-rSc
+ *            https://www.youtube.com/watch?v=Jims30XAzjI
+ *            https://www.youtube.com/watch?v=1HgM_vc-rSc
+ *            https://www.youtube.com/watch?v=YO6Xx5glLPE
+ *            https://firebase.google.com/docs/auth/android/facebook-login
  */
 package com.team.polywuff;
 
@@ -35,7 +40,6 @@ public class FacebookLogin extends AppCompatActivity implements View.OnClickList
         use toast to display to user
         firebase object auth authenticate
         firebase listener
-
 
      */
 

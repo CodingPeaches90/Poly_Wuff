@@ -1,8 +1,13 @@
 package com.team.polywuff.Utils;
 
+
 /**
- * Created by Jordan on 01/04/2017.
+ *
+ * @author : Jordan May, x15515673
+ *
+ * @reference : https://github.com/smilefam/SendBird-Android/blob/master/app/src/main/java/com/sendbird/android/sample/utils/PreferenceUtils.java
  */
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
