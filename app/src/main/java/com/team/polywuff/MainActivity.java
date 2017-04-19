@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onConnected(User user, SendBirdException e) {
                 if(e != null){
-                    Toast.makeText(MainActivity.this, "sendbird connect error", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "sendbird connect error", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -89,15 +89,16 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onRegistered(SendBird.PushTokenRegistrationStatus pushTokenRegistrationStatus, SendBirdException e) {
                         if(e!=null){
-                            Toast.makeText(MainActivity.this, "Sendbird register issue", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(MainActivity.this, "Sendbird register issue", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+
         SendBird.updateCurrentUserInfo(email, null, new SendBird.UserInfoUpdateHandler() {
             @Override
             public void onUpdated(SendBirdException e) {
                 if(e!=null){
-                    Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "update handler error", Toast.LENGTH_SHORT).show();
                     return;
                 }
             }
