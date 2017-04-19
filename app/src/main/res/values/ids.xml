@@ -5,5 +5,6 @@
     <item name="wvAttribution" type="id" />
     <item name="btGetPlace" type="id" />
     <item name="fragmentLayout" type="id" />
+    <item name="date_display" type="id" />
 
 </resources>
