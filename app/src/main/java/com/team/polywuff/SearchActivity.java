@@ -82,6 +82,7 @@ public class SearchActivity extends AppCompatActivity
         });
 
         userChatSelectBtn = (Button) findViewById(R.id.button_invite_member);
+
         userChatSelectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -75,7 +75,6 @@
         android:padding="2dp"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
-        android:background="@drawable/image_border"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         android:layout_marginStart="62dp"
@@ -86,7 +85,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="62dp"
-        android:layout_marginRight="62dp" />
+        android:layout_marginRight="62dp"
+        android:onClick="changePick"/>
 
     <Button
         android:id="@+id/saveBtn"
@@ -100,4 +100,6 @@
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="21dp"
         app:layout_constraintLeft_toLeftOf="@+id/imageUrlTf" />
+
+
 </android.support.constraint.ConstraintLayout>

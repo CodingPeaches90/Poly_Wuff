@@ -1,7 +1,9 @@
-package com.team.polywuff;
 /*
-* @author: Jordan May, x15515673
-* */
+ * @author: Christopher Kambayi, x15513473
+ *
+ */
+
+package com.team.polywuff;
 
 import android.content.Intent;
 import android.os.Bundle;

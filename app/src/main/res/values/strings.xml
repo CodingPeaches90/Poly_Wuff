@@ -149,7 +149,7 @@
     <string name="title_activity_general">General</string>
 
 
-    <!-- Block of text to be displayed on the about activity in the settigns -->
+    <!-- Block of text to be displayed on the about activity in the settings -->
     <string name="about_text">
         <![CDATA[
             This app was made by: <br/><br/>

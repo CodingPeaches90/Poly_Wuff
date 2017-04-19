@@ -1,5 +1,6 @@
 /*
-* @author: x15513473
+ * @author: Christopher Kambayi, x15513473
+ *
  */
 
 package com.team.polywuff;
@@ -15,7 +16,7 @@ import android.widget.ListView;
 public class GeneralActivity extends AppCompatActivity {
 
     //Array of strings that make up listview
-    private String [] options = {"Placeholder 1", "Placeholder 2", "Placeholder 3", "Placeholder 4", "Placeholder 5", "Placeholder 6"};
+    private String [] options = {"Assist 1", "Exercise 2", "Other one 3"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

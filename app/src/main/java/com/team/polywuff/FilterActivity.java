@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 public class FilterActivity extends AppCompatActivity {
 
+    //Declaring variables (Spinner, Button and String)
     private Spinner filter;
     private Button search;
     private String location;
@@ -27,16 +28,22 @@ public class FilterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_filter);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Array adapter to be displayed by spinner
         ArrayAdapter<String> list = new ArrayAdapter<String>(FilterActivity.this, android.R.layout.simple_spinner_item, provinces);
 
+        //Constructor for spinner and button
         filter = (Spinner) findViewById(R.id.locationFilter);
         search = (Button) findViewById(R.id.searchBtn);
 
+        //Setting filter item to display
         filter.setAdapter(list);
 
+        //Item listener for spinner
         filter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                //Sets location to corresponding province depending on what selected
                 if(position == 0){
                     location = "Leinster";
                 }
@@ -57,19 +64,21 @@ public class FilterActivity extends AppCompatActivity {
             }
         });
 
+        //Button clicked listener
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //user method is called
                 runSearch(location);
             }
         });
     }
 
+    //User method that opens a new activity and passes location
     public void runSearch(String location)
     {
         Intent intent = new Intent(this,SearchActivity.class);
         intent.putExtra("LOCATION", location);
         startActivity(intent);
     }
-
 }
