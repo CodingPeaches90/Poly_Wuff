@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+//@Reference http://www.viralandroid.com/2015/11/android-calendarview-example.html
+
+
 public class Calendar extends AppCompatActivity {
 
     CalendarView calendarView;
@@ -18,6 +21,8 @@ public class Calendar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+
+// To show the Calendar we used the CalendarView widget supported by Android
 
         calendarView = (CalendarView) findViewById(R.id.calendarView);
         dateDisplay = (TextView) findViewById(R.id.date_display);
@@ -29,6 +34,7 @@ public class Calendar extends AppCompatActivity {
             public void onSelectedDayChange(CalendarView calendarView, int i, int i1, int i2) {
                 i1 = i1+1;
                 dateDisplay.setText("Date: " + i2 + " / " + i1 + " / " + i);
+                // This displays day/month/year
 
             }
         });
