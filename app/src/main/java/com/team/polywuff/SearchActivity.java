@@ -129,7 +129,7 @@ public class SearchActivity extends AppCompatActivity
                 for (int i = 0; i < list.size();i++)
                 {
                     searchUser = list.get(i);
-                    if(searchUser.getNickname().equals(location))
+                    if(searchUser.getProfileUrl().equals(location))
                     {
                         usersFound.addLast(searchUser);
                     }
@@ -154,7 +154,7 @@ public class SearchActivity extends AppCompatActivity
                 for (int i = 0; i < list.size();i++)
                 {
                     searchUser = list.get(i);
-                    if(searchUser.getNickname().equals(location))
+                    if(searchUser.getProfileUrl().equals(location))
                     {
                         usersFound.addLast(searchUser);
                     }

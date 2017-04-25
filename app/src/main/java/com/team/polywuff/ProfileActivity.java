@@ -68,9 +68,10 @@ public class ProfileActivity extends AppCompatActivity {
         sendBirdUSer = SendBird.getCurrentUser();
         email = user.getEmail();
 
+
         //Declaring and creating list to be displayed by spinner
         ArrayAdapter<String> list = new ArrayAdapter<String>(ProfileActivity.this, android.R.layout.simple_spinner_item, province);
-        loc = sendBirdUSer.getNickname();
+        loc = sendBirdUSer.getProfileUrl();
 
         //Constructor of textview, spinner and button
         avi = (ImageView) findViewById(R.id.profilePicture);
@@ -105,7 +106,6 @@ public class ProfileActivity extends AppCompatActivity {
                 else if(position == 3){
                     loc = "Ulster";
                 }
-                refresh();
             }
 
             @Override
@@ -157,39 +157,21 @@ public class ProfileActivity extends AppCompatActivity {
                     Bitmap img = BitmapFactory.decodeFile(filePath);
                     Drawable pic = new BitmapDrawable(img);
 
-                    newPhoto = new File(filePath);
-                    Uri yourUri = Uri.fromFile(newPhoto);
+                    photoUrl.setText(filePath);
 
-                    photoUrl.setText(yourUri.toString());
-
-                    avi.setImageURI(Uri.parse(filePath));
-                    avi.setImageDrawable(pic);
                     avi.setImageBitmap(img);
                 }
         }
     }
 
     //Method to update location using Sendbird nickname feature
-    public void updateNickname(String email, String nickname)
+    public void updateNickname(String email, String location)
     {
-        SendBird.updateCurrentUserInfo(nickname, nickname, new SendBird.UserInfoUpdateHandler() {
+        SendBird.updateCurrentUserInfo(email, location, new SendBird.UserInfoUpdateHandler() {
             @Override
             public void onUpdated(SendBirdException e) {
                 if(e!=null){
                     Toast.makeText(ProfileActivity.this, "Name not updated", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-
-    //Method to update the user profile pic using sendbird
-    public void updatePhotoUrl(String email, File photo)
-    {
-        SendBird.updateCurrentUserInfoWithProfileImage(email, photo, new SendBird.UserInfoUpdateHandler() {
-            @Override
-            public void onUpdated(SendBirdException e) {
-                if(e!=null){
-                    Toast.makeText(ProfileActivity.this, "Picture not updated", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -214,16 +196,10 @@ public class ProfileActivity extends AppCompatActivity {
         if(user != null)
         {
             name.setText(email);
-            //uri = sendBirdUSer.getProfileUrl();
 
-            url = Uri.parse("http://pngimg.com/uploads/face/face_PNG5646.png");
+            url = Uri.parse(sendBirdUSer.getNickname());
 
             photoUrl.setText(url.toString());
-
-            Bitmap yourSelectedImage = BitmapFactory.decodeFile("http://pngimg.com/uploads/face/face_PNG5646.png");
-            avi.setImageBitmap(yourSelectedImage);
-
-            //avi.setImageURI(url);
         }
     }
 
